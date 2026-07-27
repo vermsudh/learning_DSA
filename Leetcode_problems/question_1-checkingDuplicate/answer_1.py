@@ -1,5 +1,5 @@
 class Solution(object):
-    def containDuplicate(seld, nums):
+    def containDuplicate(self, nums):
 
         hashset = set()
 
