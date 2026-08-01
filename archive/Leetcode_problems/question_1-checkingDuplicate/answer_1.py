@@ -15,3 +15,13 @@ class Solution(object):
 
 # Yes, a HashSet does take up space. Its space complexity is linear,
 # or O(n), where n is the number of items stored inside it.
+
+
+def containDuplicate(self, nums): 
+    hashset = ()
+
+    for n in nums:
+        if n in hashset:
+            return True
+        hashset.add(n)
+        return False

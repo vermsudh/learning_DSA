@@ -1,0 +1,89 @@
+# ==========================================
+# C / C++ Rules
+# ==========================================
+# Prerequisites
+*.d
+
+# Object files and compiled binaries
+*.o
+*.ko
+*.obj
+*.elf
+*.slo
+*.lo
+
+# Linker output and maps
+*.ilk
+*.map
+*.exp
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Libraries and archives
+*.lib
+*.a
+*.la
+*.lai
+*.so
+*.dylib
+*.dll
+
+# Executables
+*.exe
+*.out
+*.app
+
+# Build directories (Commonly used by CMake or Make)
+[Bb]uild/
+[Dd]ebug/
+[Rr]elease/
+
+# ==========================================
+# Python Rules
+# ==========================================
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions (if Python compiles C components)
+# *.so is already covered above
+
+# Distribution / packaging
+~*
+.Python
+bin/
+dist/
+build/
+eggs/
+.eggs/
+*.egg-info/
+*.egg
+
+# Virtual Environments
+.env
+.venv
+env/
+venv/
+ENV/
+
+# Testing and Coverage
+.pytest_cache/
+.tox/
+.coverage
+htmlcov/
+nosetests.xml
+coverage.xml
+.cache
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# IDEs and Editors (Optional but highly recommended)
+.vscode/
+.idea/
+*.swp
+*.swo
+*.DS_Store
