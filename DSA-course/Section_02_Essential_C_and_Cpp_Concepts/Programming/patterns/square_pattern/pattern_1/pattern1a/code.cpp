@@ -1,12 +1,9 @@
 #include <iostream>
 using namespace std;
-
 int main(){
-
     int n; 
-    cout << "Eneter the value of n to print from 1 to n";
+    cout << "Enter the value of n to print from 1 to n";
     cin >> n;
-
     for(int i = 1; i <=n; i++){ // outer loop which will print from 1 to n (to print the rows)
         for(int j = 1; j<= n; j++){ // inner loop to print the coulmns
             cout << j;
