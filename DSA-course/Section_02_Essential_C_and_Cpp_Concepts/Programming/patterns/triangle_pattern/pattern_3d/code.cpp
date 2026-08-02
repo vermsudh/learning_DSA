@@ -5,13 +5,14 @@ int main(){
     int n; 
     cout << "Enter the value of n to print from 1 to n :  ";
     cin >> n;
+    char ch = 'A';
+
     for(int i = 0; i < n; i++){
-        int num = 1;
-        for(int j = 0; j < i+1; j++){
-            cout << i +1 << " ";
-            num++;
+        for(int j = 0; j < i+1; j ++){
+            cout << ch;
         }
-        cout << endl;
+        ch ++;
+       cout << endl;
     }
     return 0;
 }
