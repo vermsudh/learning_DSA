@@ -5,9 +5,7 @@ int main(){
     int n; 
     cout << "Enter the value of n to print from 1 to n :  ";
     cin >> n;
-    
-    for(int i = n; i > 0; i-- ){
-        cout << i << endl;
-    }
+    char ch = 'A';
+   
     return 0;
 }
