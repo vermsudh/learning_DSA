@@ -87,3 +87,11 @@ coverage.xml
 *.swp
 *.swo
 *.DS_Store
+
+# exe files
+*a.out
+
+#Debugger files
+*.dSYM/
+*.dSYM
+*.dSYM.zip
