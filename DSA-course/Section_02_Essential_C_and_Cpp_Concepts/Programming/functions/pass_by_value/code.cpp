@@ -11,6 +11,8 @@ int sum(int a, int b){
 int changeX(int x){
     x = 2 * x;
     cout << "x = " << x << endl;
+
+    return x;
 }
 
 int main(){
