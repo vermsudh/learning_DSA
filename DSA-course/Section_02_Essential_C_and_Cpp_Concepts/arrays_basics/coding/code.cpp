@@ -17,7 +17,13 @@ int main(){
     for(int i = 0; i <= 5; i++){
         cout << B[i] << " ";
     }
+    //How to write for each loop? 
 
+
+
+
+
+    
     return 0; // Please make sure you type everything before this return statment. 
                 // If you type anything after return 0, the compliler will ignore it. 
 }
