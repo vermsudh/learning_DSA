@@ -43,5 +43,7 @@ int main(){
     }
     cout << "The maximum element in this array is : " << max;
     
+    // One more question we need to find the index value in the array which is the largest and the smallest. This is homework. 
+
     return 0;
 }   
