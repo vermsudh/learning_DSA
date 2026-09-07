@@ -10,18 +10,17 @@ int main()
     int left = 0;
     int right = 0;
 
-    while (right < n) {
+    while(right < n){
 
-        if (nums[right] != 0) {
-            swap(nums[left], nums[right]);
+        if(nums[right] != 0){
+            swap(nums[right], nums[left]);
             left++;
         }
-
         right++;
     }
 
-    for (int i = 0; i < n; i++) {
-        cout << nums[i] << " ";
+    for(int i = 0; i < n; i++){
+        cout << nums[i];
     }
 
     return 0;
