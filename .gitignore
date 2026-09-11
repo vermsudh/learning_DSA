@@ -95,3 +95,6 @@ coverage.xml
 *.dSYM/
 *.dSYM
 *.dSYM.zip
+
+code
+*.exe
