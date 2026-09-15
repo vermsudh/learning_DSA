@@ -39,12 +39,9 @@ int paintPartition(vector<int> nums, int m){
 }
 int main()
 {
-
     vector<int> nums = {10, 10, 10, 10};
     vector<int> nums2 = {40, 30, 10, 20};
-
     int m = 2;
-
     cout << paintPartition(nums, m) << endl;
     cout << paintPartition(nums2, m);
 
