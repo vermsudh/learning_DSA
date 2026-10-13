@@ -13,7 +13,7 @@ int main()
         if(nums[i] == 0) count_0 += 1;
         if(nums[i] == 1)count_1 += 1;
         if(nums[i] == 2)count_2 +=1;
-        
+    
     }
     // vector<int> myVec(count, value);
     vector<int> sortedVec;
