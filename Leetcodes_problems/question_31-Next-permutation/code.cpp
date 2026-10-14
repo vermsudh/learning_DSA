@@ -2,6 +2,10 @@
 #include<vector>
 using namespace std;
  
+void nextpermutation(vector<int>& nums){
+
+}
+
 int main()
 {
 
