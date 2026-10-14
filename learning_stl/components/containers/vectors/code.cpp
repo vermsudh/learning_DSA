@@ -37,5 +37,11 @@ int main()
         cout << n << " ";
     }
 
+    vector<int> vec3 = {2, 3 ,4};
+    vec3.clear();
+
+    cout << endl << "size of vec3 after clear :" << vec3.size() << endl ;//0
+    cout << endl << "capacity of vec3 after clear :" <<  vec3.capacity() << endl; //3
+
     return 0;
 }
