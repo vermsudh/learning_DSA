@@ -112,14 +112,14 @@ bool checkInclusion(string s1, string s2) {
 
 ### What each variable does
 
-| Variable | Role |
-|---|---|
-| `freq` | Required frequencies from `s1` |
-| `windowFreq` | Frequencies for the one window currently being checked in `s2` |
-| `i` | The starting index of a candidate window |
-| `current` | Moves through characters inside that candidate window |
-| `charactersAdded` | Counts how many characters have entered the current window |
-| `windowSize` | Always `s1.length()` |
+| Variable            | Role                                                             |
+| ------------------- | ---------------------------------------------------------------- |
+| `freq`            | Required frequencies from `s1`                                 |
+| `windowFreq`      | Frequencies for the one window currently being checked in `s2` |
+| `i`               | The starting index of a candidate window                         |
+| `current`         | Moves through characters inside that candidate window            |
+| `charactersAdded` | Counts how many characters have entered the current window       |
+| `windowSize`      | Always `s1.length()`                                           |
 
 ## Counter questions and answers
 
