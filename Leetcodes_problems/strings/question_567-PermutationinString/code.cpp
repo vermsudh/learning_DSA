@@ -1,5 +1,5 @@
 #include<iostream>
-#include<vector>
+#include<string>
 using namespace std;
 
 bool isFreqSame(int freq1[], int freq2[]){
