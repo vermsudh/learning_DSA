@@ -4,17 +4,15 @@ using namespace std;
  
 int maxSumRow(int matrix[3][3], int row, int col){
 
-    int sum = 0;
+    int rowSum = 0;
     int maxRowSum = INT_MIN;
-    for(int i = 0; i < row;){
-        sum = 0;
+    for(int i = 0; i < row; i++){
+        rowSum = 0;
         for(int j = 0; j < col; j++){
-            sum += matrix[i][j];
+            rowSum += matrix[i][j];
         }
-        maxRowSum = max(sum, maxRowSum);
-        i++;
+        maxRowSum = max(rowSum, maxRowSum);
     }
-
     return maxRowSum;
 }
 
