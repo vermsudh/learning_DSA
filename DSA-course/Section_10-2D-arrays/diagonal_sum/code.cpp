@@ -9,9 +9,9 @@ int digonalSum(int matrix[3][3], int rows, int cols){
         for(int j = 0; j < cols; j++){
             PD = matrix[i][j];
         }
-        i++;
+        i++;  
     }
-}
+}  
 
 int main()
 {
