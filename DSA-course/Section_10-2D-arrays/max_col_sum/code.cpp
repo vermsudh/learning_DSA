@@ -24,8 +24,4 @@ int main()
     int matrix[3][3] = {{1, 2, 3} , {4, 5, 6 }, {7, 8, 9}};
     int rows = 3;
     int cols = 3;
-
-    cout << "The maxium sum col is: " << maxSumRow(matrix, 3, 3);
-
-    return 0;
 }
