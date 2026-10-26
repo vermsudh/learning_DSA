@@ -8,7 +8,7 @@ int digonalSum(int matrix[3][3], int n){ // O(n ^ 2)
     
     int diagonalSum;
     for(int i = 0; i<n; i++){
-        for(int j = i; j < n; j++){
+        for(int j = 0; j < n; j++){
             if(i == j){
                 sum += matrix[i][j]; // PD
             }else if(j == n - i - 1){
