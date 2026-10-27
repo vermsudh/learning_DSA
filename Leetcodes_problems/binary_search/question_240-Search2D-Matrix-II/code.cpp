@@ -3,6 +3,7 @@
 using namespace std;
 
 bool searchMatrix(vector<vector<int>> mat, int target){
+//TC : would be O(n + m) as we moving r= 0 to m, and c = n -1 to 0;
 
     int m = mat.size();// which is rows. 
     int n = mat[0].size(); // number of columns. 
@@ -20,7 +21,6 @@ bool searchMatrix(vector<vector<int>> mat, int target){
         }else{
             r++;
         }
-
     }
     return false;
 }
