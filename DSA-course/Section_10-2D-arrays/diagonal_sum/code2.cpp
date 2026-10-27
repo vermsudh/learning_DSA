@@ -2,7 +2,7 @@
 #include<vector>
 using namespace std;
 
-int digonalSum(int matrix[4][4], int n){
+int digonalSum(int matrix[4][4], int n){//O(n ^ 2)
     int sum = 0;
     for(int i = 0; i < n; i++){
         for(int j = 0; j < n; j++){
@@ -16,7 +16,7 @@ int digonalSum(int matrix[4][4], int n){
     return sum;
 }
 
-int digonalSum1(int matrix[4][4], int n){
+int digonalSum1(int matrix[4][4], int n){//O(n)
     int sum = 0;
     //more Optamized approach where we do not have to define j as we know that PD: i= j, SD : j = n - i - 1
 
