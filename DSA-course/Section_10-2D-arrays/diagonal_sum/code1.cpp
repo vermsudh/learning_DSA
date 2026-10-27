@@ -29,10 +29,20 @@ int digonalSum(int matrix[4][4], int n){
     return sum;
 }
 
+int digonalSum1(int matrix[4][4], int n){
+    int sum = 0;
+    //we know that PD : i == j and SD : j = n - i - 1
+    for(int i = 0; i < n; i++){
+        sum += matrix[i][i];
+        if(i != n - i - 1){
+            sum += matrix[i][n - i - 1];
+        }
+    }
+    return sum;
+}
  
 int main()
 {
-
     int matrix[4][4] = {{1, 2, 3, 4} , 
                         {5, 6, 7, 8}, 
                         {9, 10, 11, 12}, 
@@ -42,6 +52,9 @@ int main()
     int n = 4;
 
     cout << digonalSum(matrix, 4) << endl;
+
+    cout << digonalSum1(matrix, 4) << endl;
+
 
     return 0;
 }
