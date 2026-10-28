@@ -23,6 +23,25 @@ int searchMatrix(vector<vector<int>> mat, int target){
     return false; 
 }
 
+int searchMatrix(vector<vector<int>> mat, int target){
+    int rows = mat.size();
+    int cols = mat[0].size();
+
+    int row = rows; // 0
+    int col = cols - 1; // 4
+
+    while(col >= 0 && row < rows){ // row is 0 at first and rows are constatant which is 5 as rows = mat.size();
+        int mid = mat[row][col];
+        if(target == mid){
+            return true;
+        }else if(target < mid){
+            col --;
+        }else{
+            row++;
+        }
+    }
+}
+
 int main()
 {
     vector<vector<int>> mat = {{1,4,7,11,15},
