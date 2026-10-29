@@ -21,7 +21,7 @@ int main(){
     return 0;
 }
 // Time complexity will be N ^ 2 as the loop is running twice.
-// Space complexity will be 
+// Space complexity will be O(n)
 
 // Why it is O(1)No Extra Data Structures: 
 // The algorithm does not allocate any dynamic 
