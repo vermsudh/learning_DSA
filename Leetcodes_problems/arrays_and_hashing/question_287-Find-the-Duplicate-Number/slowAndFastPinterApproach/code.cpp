@@ -18,7 +18,7 @@ int findDuplicate(vector<int>& nums) {
     }while(slow != fast);
 
     //initlize the slow with nums[0] again. 
-    
+    slow = nums[0];
     //2) Now, we are going to increment the slow with +1 and fast with + 1; 
 
     while(fast != slow){
