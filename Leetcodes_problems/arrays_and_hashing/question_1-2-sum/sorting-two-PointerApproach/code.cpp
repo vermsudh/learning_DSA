@@ -17,9 +17,10 @@ vector<int> twoSum(vector<int>& nums, int target){
         else{
             ans.push_back(start);
             ans.push_back(end);
-            return ans;
+            break;
         }
     }
+    return ans;
 }
 
 int main(){
@@ -27,8 +28,11 @@ int main(){
     vector<int> nums = {2,7,11,15};
     int target = 9;
 
-    cout << twoSum << endl;
+    vector<int> result =  twoSum(nums,target);
 
+    for(int i : result){
+        cout << i << " ";
+    }
     // We can first sort this array
     // Then we take first and the last element and add them
     // If it is going to be equal to target, then we will have the solution. 
