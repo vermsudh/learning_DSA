@@ -9,12 +9,9 @@ int findDuplicate(vector<int>& nums) {
     //At first, we are going to initlize both the pointers with 0th index element. 
     int slow = nums[0], fast = nums[0];
     //1) At first, we are going to move the slow pointer with 1 step and fast pointer by 2. 
-    
     do{
-
         slow = nums[slow];
         fast = nums[nums[fast]];
-
     }while(slow != fast);
 
     //initlize the slow with nums[0] again. 
