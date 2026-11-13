@@ -25,9 +25,9 @@ int subarraySum(vector<int>& nums, int k) {
             currentSum += nums[j];
             
             if(currentSum == k){
-                cout << " Value of i : " <<  i << " " << endl;
-                cout << " Value of j : "<< j << " " << endl;
-                count ++;
+                cout << " Value of i : " <<  nums[i] << " " << endl;
+                cout << " Value of j : "<< nums[j] << " " << endl;
+                count++;
                 
             }
         }
