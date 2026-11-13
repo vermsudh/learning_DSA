@@ -9,6 +9,7 @@ vector<vector<int>> fourSum(vector<int>& nums, int target) {
 
     //Since we are using 2 pointers approach, we would need to sort the array. 
     sort(nums.begin(), nums.end());// TC : O(n log n)
+    //-3, 0, 1, 2, 3, 3
 
     for(int i = 0; i < n; i++){
         //We have the first value. 
@@ -43,7 +44,8 @@ vector<vector<int>> fourSum(vector<int>& nums, int target) {
                     while(p < q && nums[p] == nums[p - 1]) p++;
                 }
             }
-            j++;
+            j++;// We have to make sure that j does not move until we are done traversing over the 2 pointers. The 
+            //This is the reason we are incremneting j when it is done traversing over this 2 pointer window. 
             //We have to make sure that we do not repeat the values of j as well. 
 
             while(j < n && nums[j] == nums[j - 1]) j++;
@@ -68,6 +70,6 @@ int main()
         }
         cout << "\n"; // Prints each triplet on a new line
     }
-    
+
     return 0;
 }
