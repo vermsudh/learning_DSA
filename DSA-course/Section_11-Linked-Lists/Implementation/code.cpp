@@ -3,7 +3,6 @@
 using namespace std;
 
 //For using Linkedin List in Cpp, We would have to use Lists in STL. 
-
 class Node {
 public :
     int data; 
@@ -72,21 +71,33 @@ public:
         }
         Node* temp = head;
         head = head -> next;
+
+        if(head == NULL){
+            tail = NULL;
+        }
         temp -> next = NULL;
         delete temp;
     }
 
     void pop_back(){
         if(head == NULL){
-            cout << "LL is empty. ";
+            cout << "LL is empty\n";
             return;
         }
+
+        if(head == tail){
+            delete head;
+            head = tail = NULL;
+            return;
+        }
+
         Node* temp = head;
 
-        while(temp -> next != tail){
-            temp = temp -> next;
+        while(temp->next != tail){
+            temp = temp->next;
         }
-        temp -> next = NULL;
+
+        temp->next = NULL;
         delete tail;
         tail = temp;
     }
@@ -98,6 +109,7 @@ public:
         }
         if(pos == 0){
             push_front(val);
+            return;
         }
         Node* temp = head;
         for(int i = 0; i < pos - 1; i++){
@@ -118,7 +130,7 @@ public:
         int index = 0; 
         while(temp != NULL){
             if(val == temp -> data){
-                cout << "This value exist in the LL";
+                cout << "This value exist in the LL at index : ";
                 return index;
             }
             temp = temp -> next;//Move to the next Node if val is not matching the right data. 
