@@ -92,7 +92,6 @@ public:
     }
 
     void insert(int val, int pos){
-        Node* newNode = new Node(val);
         if(pos < 0){
             cout << "Invalid Position";
             return;
@@ -104,6 +103,7 @@ public:
         for(int i = 0; i < pos - 1; i++){
             temp = temp -> next;
         }
+        Node* newNode = new Node(val);
         newNode -> next = temp -> next;
         temp -> next = newNode;
     }
