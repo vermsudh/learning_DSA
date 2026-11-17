@@ -101,11 +101,27 @@ public:
         }
         Node* temp = head;
         for(int i = 0; i < pos - 1; i++){
+            if(temp == NULL){
+                cout << "Ivalid Pos \n";
+                return;
+            }
             temp = temp -> next;
         }
         Node* newNode = new Node(val);
         newNode -> next = temp -> next;
         temp -> next = newNode;
+    }
+
+    void search(int val){
+        Node* temp = head;
+        while(temp != NULL){
+            if(val == temp -> data){
+                cout << "This value exist in the LL";
+            }
+            temp = temp -> next;//Move to the next Node if val is not matching the right data. 
+        }
+        //We can print a statment if we do not find the value in the LL. 
+       cout << "This value does not exist in the Linked List." << endl;
     }
 
     void printLL(){
