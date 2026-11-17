@@ -26,6 +26,11 @@ public:
     List(){
         head = tail = NULL;
     };
+    //Functions of LinkedList are 
+    //1) push-front -> It push a new value on the front. Storing at the first of the LL.
+    //2) push-back -> It push a new value from the back. Storing at the end of the LL. 
+
+
     //We will create a new function which should be void. 
     void push_front(int val){
         Node* newNode = new Node(val); // dynamic object which stays in the memory after the call. 
@@ -43,6 +48,28 @@ public:
         }
     }
 
+    void push_back(int val){
+        Node* newNode = new Node(val);
+
+        if(head == NULL){
+            head = tail = newNode;
+            return;
+        }else{
+            tail-> next = newNode;
+            tail = newNode;
+        }
+    }
+
+    void pop_front(){
+        if(head == NULL){
+            cout << "LL is empty \n";
+        }
+        Node* temp = head;
+        head = head -> next;
+        temp -> next = NULL;
+        delete temp;
+    }
+
     void printLL(){
         Node* temp = head;
         while(temp != NULL){
@@ -51,12 +78,7 @@ public:
         }
         cout << " NULL " <<  endl;
     }
-
 };
-
-//Functions of LinkedList are 
-//1) push-front -> It push a new value on the front. Storing at the first of the LL.
-//2) push-back -> It push a new value from the back. Storing at the end of the LL. 
 
 int main()
 {
@@ -66,6 +88,13 @@ int main()
     ll.push_front(1);
     ll.push_front(2);
     ll.push_front(3);
+
+    ll.push_back(4);
+    ll.push_back(5);
+
+    ll.push_front(6);
+
+    ll.pop_front();
 
     ll.printLL();
 
