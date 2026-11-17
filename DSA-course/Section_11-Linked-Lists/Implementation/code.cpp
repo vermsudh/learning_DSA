@@ -24,6 +24,8 @@ class List{
 
 public: 
     List(){
+        //Initiall, we will assign the first node. THe head pointer and tail pointer should be
+        //at the first node. 
         head = tail = NULL;
     };
     //Functions of LinkedList are 
@@ -33,8 +35,11 @@ public:
 
     //We will create a new function which should be void. 
     void push_front(int val){
+        //You're dynamically allocating memory for a new Node.
         Node* newNode = new Node(val); // dynamic object which stays in the memory after the call. 
         //Node newNode(val); //This is static which create object in the memory. 
+
+        //Step 2: Check whether the Linked List is empty
         if(head == NULL){
             head = tail = newNode;
             return;
@@ -63,11 +68,44 @@ public:
     void pop_front(){
         if(head == NULL){
             cout << "LL is empty \n";
+            return;
         }
         Node* temp = head;
         head = head -> next;
         temp -> next = NULL;
         delete temp;
+    }
+
+    void pop_back(){
+        if(head == NULL){
+            cout << "LL is empty. ";
+            return;
+        }
+        Node* temp = head;
+
+        while(temp -> next != tail){
+            temp = temp -> next;
+        }
+        temp -> next = NULL;
+        delete tail;
+        tail = temp;
+    }
+
+    void insert(int val, int pos){
+        Node* newNode = new Node(val);
+        if(pos < 0){
+            cout << "Invalid Position";
+            return;
+        }
+        if(pos == 0){
+            push_front(val);
+        }
+        Node* temp = head;
+        for(int i = 0; i < pos - 1; i++){
+            temp = temp -> next;
+        }
+        newNode -> next = temp -> next;
+        temp -> next = newNode;
     }
 
     void printLL(){
@@ -98,7 +136,25 @@ int main()
 
     ll.printLL();
 
-    //How to print the Linked Lists? 
+    ll.pop_back();
+
+    ll.printLL();
+
+    cout << "---------------------------" << endl;
+
+    List ll1;
+
+    ll1.push_front(3);
+    ll1.push_front(2);
+    ll1.push_front(1);
+    cout<< "Before Insertion : ";
+    ll1.printLL();
+
+    cout<< "After Insertion : ";
+
+    ll1.insert(4, 1);
+
+    ll1.printLL();
 
     return 0;
 }
