@@ -112,16 +112,22 @@ public:
         temp -> next = newNode;
     }
 
-    void search(int val){
+    int search(int val){
+        //We would have to return the index of the key. 
         Node* temp = head;
+        int index = 0; 
         while(temp != NULL){
             if(val == temp -> data){
                 cout << "This value exist in the LL";
+                return index;
             }
             temp = temp -> next;//Move to the next Node if val is not matching the right data. 
+            index++;
         }
+
         //We can print a statment if we do not find the value in the LL. 
        cout << "This value does not exist in the Linked List." << endl;
+       return -1;
     }
 
     void printLL(){
@@ -171,6 +177,8 @@ int main()
     ll1.insert(4, 1);
 
     ll1.printLL();
+
+    cout << " " << ll1.search(4) << " " ;
 
     return 0;
 }
