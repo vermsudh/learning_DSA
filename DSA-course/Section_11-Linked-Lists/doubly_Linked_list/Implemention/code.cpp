@@ -76,6 +76,11 @@ public:
     }
     //4) pop front will remove the node from the front of the LL. 
     void popfront(){
+        if(head == nullptr){
+            cout << "doubly linked lists in null";
+            return;
+        }
+
         //assume we have we have this LL : 1 <=> 2 <=> 3
         //The end result should be 2 <=> 3
 
@@ -98,7 +103,33 @@ public:
         //Now we can safely delete the temp;
         delete temp;
     }
-    
+
+    void pop_back(){
+
+        if(head == nullptr){
+            cout << "The list is empty";
+            return;
+        }
+
+        //We need to delete node from the back. 
+
+        Node* temp = tail;
+
+        //firtly we have to move the the tail one node back. 
+        tail = tail -> prev;
+        
+        //Now break the connections. 
+        //We are going to point the temp to null. 
+        //But we need to make sure that has two nodes. 
+        if(tail != nullptr){
+            tail -> next = nullptr;
+        }
+
+        //Then we need to move tail -> next to null. 
+        temp -> prev = nullptr;
+
+        delete temp;
+    }
 };
 
 int main()
